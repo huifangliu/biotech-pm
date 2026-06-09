@@ -1,0 +1,12 @@
+services:
+  biotech-pm:
+    build: .
+    container_name: biotech-pm
+    restart: unless-stopped
+    environment:
+      BIOTECH_PM_DB: /app/backend/data/biotech_pm.sqlite3
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/data:/app/backend/data
+      - ./backend/uploads:/app/backend/uploads

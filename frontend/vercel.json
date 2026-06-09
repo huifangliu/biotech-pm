@@ -2,6 +2,10 @@
   "cleanUrls": true,
   "rewrites": [
     {
+      "source": "/api/:path*",
+      "destination": "http://92.205.17.230:8000/api/:path*"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
